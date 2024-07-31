@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    //Procedural Vertstacking
+    function addLineBreaks(text) {
+        return text.split('').join('<br>');
+    }
+    const textElements = document.querySelectorAll('.text');
+
+            // Apply the function to each text element
+            textElements.forEach(element => {
+                const originalText = element.innerText;
+                element.innerHTML = addLineBreaks(originalText);
+            });
+
+    
     const imageContainers = document.querySelectorAll('.image-container');
 
     imageContainers.forEach(container => {
