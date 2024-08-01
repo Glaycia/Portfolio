@@ -36,10 +36,14 @@ body {
 .first {
     color:rgb(220, 238, 255);
     font-size: 25vmin;
+    
+    margin: 2vmin;
 }
 .last {
     color:rgb(15, 25, 54);
     font-size: 25vmin;
+    
+    margin: 2vmin;
 }
 
 #image-track {
@@ -113,7 +117,7 @@ body {
 
 .image-container:hover .glass {
     opacity: 1;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.5vmin);
 }
 .image-container:hover .text {
     opacity: 1;
