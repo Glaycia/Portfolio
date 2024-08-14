@@ -1,41 +1,12 @@
-//Procedural Vertstacking
-function addLineBreaks(text) {
-    return text.split('').join('<br>');
-}
-const textElements = document.querySelectorAll('.text');
-        textElements.forEach(element => {
-            const originalText = element.innerText;
-            element.innerHTML = addLineBreaks(originalText);
-        });
-
-
-const imageContainers = document.querySelectorAll('.image-container');
-
-imageContainers.forEach(container => {
-    var isDragging = true;
-    var startX = 0;
-    container.addEventListener('mousedown', e => {
-        isDragging = false;
-        startX = e.clientX; // Track initial mouse position
-    });
-
-    container.addEventListener('mousemove', e => {
-        if (Math.abs(e.clientX - startX) > 5) { // Consider it dragging if the mouse moves more than 5px
-            isDragging = true;
-        }
-    });
-
-    container.addEventListener('mouseup', () => {
-        if (!isDragging) {
-            const url = container.getAttribute('data-url');
-            if (url) {
-                window.location.href = url;
-            }
-        }
-        isDragging = false; // Reset dragging state
-    });
-});
-
+// Procedural Vertstacking
+// function addLineBreaks(text) {
+//     return text.split('').join('<br>');
+// }
+// const textElements = document.querySelectorAll('.text');
+//         textElements.forEach(element => {
+//             const originalText = element.innerText;
+//             element.innerHTML = addLineBreaks(originalText);
+//         });
 
 const track = document.getElementById("image-track");
 const nameplate = document.getElementById("nameplate");
